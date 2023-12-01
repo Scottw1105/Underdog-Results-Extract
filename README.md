@@ -28,7 +28,7 @@ Extract your results from the "Results" page on the Underdog fantasy website for
 
 ![Download image](readme_img/results.png)
 
-5. Right click on the chrome extension icon and choose `Options`.
+5. Right click on the chrome extension icon and choose `Options`. A new tab will open with an input box.
 
 ![Download image](readme_img/options_click.png)
 

@@ -15,3 +15,35 @@ Extract your results from the "Results" page on the Underdog fantasy website for
 5. To use the extension, click the puzzle-piece looking icon in the top right of Google Chrome, and "pin" the extension. Once you see it in the list of extension icons.
 
 ## Usage
+
+1. Log into your Underdog account on `www.UnderdogFantasy.com`.
+
+2. Click on the `Results` tab along the top of the page.
+
+![Download image](readme_img/results_heading.png)
+
+3. Ensure `Drafts` is selected just below the heading.
+
+4. Choose the sport you'd like to extract the results for. (Currently only NBA is tested, and known to be working)
+
+![Download image](readme_img/results.png)
+
+5. Right click on the chrome extension icon and choose `Options`.
+
+![Download image](readme_img/options_click.png)
+
+6. Enter the date you'd like to get the extract up until. This must be in the same format as it's seen on the website. Click `Save`. You'll see a notification that you're settings have been updated.
+
+Example:
+
+If I want to gather the results for the 11/30 and 11/29 from the screenshot below step 4, here's what I'd enter.
+
+![Download image](readme_img/settings.PNG)
+
+7. Navigate back to the tab with your results and left click the chrome extension icon. You'll notice your page is looping through the tournaments and dates you've requested.
+
+8. Once the process is finished a download box will appear, save the resulting CSV file wherever you'd like.
+
+Example of resulting CSV file:
+
+![Download image](readme_img/results_csv.PNG)

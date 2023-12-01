@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Results Grabber",
+  "version": "1.0",
+  "description": "Automatically clicks specified buttons on a website",
+  "permissions": ["storage", "activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "browser_action": {
+    "default_title": "Results Grabber"
+  }
+}

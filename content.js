@@ -92,6 +92,30 @@ async function findDivs(startMarker, stopMarker) {
 
         var tourney_name = document.querySelector(".styles__title__ZrO6C").textContent.trim();
         tourney_info.push(tourney_name);
+		
+		var entry_value = document.querySelector(".styles__entryInfoValue__qx_JF").textContent.trim();
+        tourney_info.push(entry_value);
+        
+        var raw_tourney_info = document.querySelectorAll(".styles__infoValue__F0R73")
+
+        var sport = raw_tourney_info[0].textContent.trim();
+        tourney_info.push(sport);
+        var entrants = raw_tourney_info[1].textContent.trim().replace(',','');
+        tourney_info.push(entrants);
+        var fill = raw_tourney_info[2].textContent.trim();
+        tourney_info.push(fill);
+        var slate = raw_tourney_info[3].textContent.trim();
+        tourney_info.push(slate);
+        var max_entries = raw_tourney_info[5].textContent.trim();
+        tourney_info.push(max_entries);
+        var draft_size = raw_tourney_info[6].textContent.trim();
+        tourney_info.push(draft_size);
+        var draft_rounds = raw_tourney_info[7].textContent.trim();
+        tourney_info.push(draft_rounds);
+        var rake = raw_tourney_info[8].textContent.trim();
+        tourney_info.push(rake);
+        var start_time = raw_tourney_info[9].textContent.trim();
+        tourney_info.push(start_time);
 
         document.querySelector(".styles__closeButton__ZYuEF").click();
         await sleep(1000);

@@ -32,11 +32,11 @@ Extract your results from the "Results" page on the Underdog fantasy website for
 
 ![Download image](readme_img/options_click.png)
 
-6. Enter the date you'd like to get the extract up until. This must be in the same format as it's seen on the website. Click `Save`. You'll see a notification that you're settings have been updated.
+6. Enter the date/slate you'd like to start at and date/slate to get the extract up until. This must be in the same format as it's seen on the website. Click `Save`. You'll see a notification that you're settings have been updated.
 
 Example:
 
-If I want to gather the results for the 11/30 and 11/29 from the screenshot below step 4, here's what I'd enter.
+If I want to gather the results for the 12/7 and 12/4 from the screenshot below step 4, here's what I'd enter.
 
 ![Download image](readme_img/settings.PNG)
 

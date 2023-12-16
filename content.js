@@ -93,7 +93,7 @@ async function findDivs(startMarker, stopMarker) {
         var tourney_name = document.querySelector(".styles__title__ZrO6C").textContent.trim();
         tourney_info.push(tourney_name);
 		
-		var entry_value = document.querySelector(".styles__entryInfoValue__qx_JF").textContent.trim();
+		    var entry_value = document.querySelector(".styles__entryInfoValue__qx_JF").textContent.trim();
         tourney_info.push(entry_value);
         
         var raw_tourney_info = document.querySelectorAll(".styles__infoValue__F0R73")
@@ -130,7 +130,7 @@ async function findDivs(startMarker, stopMarker) {
             var winnings = Array.from(lineup_info.childNodes)
               .filter(node => node.nodeType === 3) // Filter out non-text nodes
               .map(node => node.textContent.trim())
-              .join(' ');
+              .join(' ').replace(',','');
             var lineup_index = LineupIndex + 1;
 
             var lineup_temp = [];

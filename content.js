@@ -35,7 +35,7 @@ async function findDivs(startMarker, stopMarker) {
   let foundStop = false; // Variable to track whether stop is found
   var tournament_info = [['Entry Number', 'Winnings', 'Place', 'Tournament Name', 'Entry Value', 'Sport',
     'Entrants', 'Fill %', 'Slate', 'Max Entries', 'Draft Size', 'Draft Rounds',
-    'Rake', 'Start Time']];
+    'Rake', 'Start Time', 'Games']];
 
   if (divs.length > 0) {
     for (let outerIndex = 0; outerIndex < divs.length; outerIndex++) {
@@ -63,6 +63,8 @@ async function findDivs(startMarker, stopMarker) {
 
       // Click the div
       div.click();
+      var games = div.querySelector(".styles__slateInfoLabel__hL16h").textContent.trim();
+      console.log(games);
       console.log(`Clicked div ${outerIndex}`);
 
       // Optionally, you can add a delay using the sleep function
@@ -75,6 +77,7 @@ async function findDivs(startMarker, stopMarker) {
       // Begin loop to gather specific tournament information
       for (let innerIndex = 0; innerIndex < tourneys.length; innerIndex++) {
         var tourneys = findTournaments();
+        
         const tourney = tourneys[innerIndex];
         const tourneyText = tourney.textContent.trim();
         console.log(tourneyText);
@@ -116,6 +119,8 @@ async function findDivs(startMarker, stopMarker) {
         tourney_info.push(rake);
         var start_time = raw_tourney_info[9].textContent.trim();
         tourney_info.push(start_time);
+
+        tourney_info.push(games);
 
         document.querySelector(".styles__closeButton__ZYuEF").click();
         await sleep(1000);

@@ -43,13 +43,6 @@ async function findDivs(startMarker, stopMarker) {
       const text = div.textContent.trim();
       console.log(text);
 
-      // Check if the text contains the stop marker
-      if (text.includes(stopMarker)) {
-        console.log('Stop marker found. Exiting the loop.');
-        foundStop = true; // Set the variable to true
-        break; // Use break to exit the outer loop
-      }
-
       if (text.includes(startMarker)) {
         console.log('Start marker found. Continuing with the loop.');
         foundStart = true; // Set the variable to true
@@ -152,6 +145,12 @@ async function findDivs(startMarker, stopMarker) {
         await sleep(1000); // Add an extra sleep after clicking back
       }
       console.log(tournament_info);
+      // Check if the text contains the stop marker
+      if (text.includes(stopMarker)) {
+        console.log('Stop marker found. Exiting the loop.');
+        foundStop = true; // Set the variable to true
+        break; // Use break to exit the outer loop
+      }
     }
 
     if (foundStop) {

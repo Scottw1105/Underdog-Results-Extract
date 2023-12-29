@@ -32,7 +32,7 @@ Extract your results from the "Results" page on the Underdog fantasy website for
 
 ![Download image](readme_img/options_click.png)
 
-6. Enter the date/slate you'd like to start at and date/slate to get the extract up until. This must be in the same format as it's seen on the website. Click `Save`. You'll see a notification that you're settings have been updated.
+6. Enter the date/slate you'd like to start at and date/slate to get the extract until(inclusive). This must be in the same format as it's seen on the website. Click `Save`. You'll see a notification that you're settings have been updated.
 
 Example:
 

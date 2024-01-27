@@ -33,7 +33,7 @@ async function findDivs(startMarker, stopMarker) {
   const divs = Array.from(document.querySelectorAll(".styles__slateRow__aPpfu "));
   let foundStart = false; // Variable to track whether start is found
   let foundStop = false; // Variable to track whether stop is found
-  var tournament_info = [['Entry Number', 'Winnings', 'Place', 'Tournament Name', 'Entry Value', 'Sport',
+  var tournament_info = [['Entry Number', 'Lineup Players', 'Winnings', 'Place', 'Tournament Name', 'Entry Value', 'Sport',
     'Entrants', 'Fill %', 'Slate', 'Max Entries', 'Draft Size', 'Draft Rounds',
     'Rake', 'Start Time', 'Games']];
 
@@ -129,10 +129,13 @@ async function findDivs(startMarker, stopMarker) {
               .filter(node => node.nodeType === 3) // Filter out non-text nodes
               .map(node => node.textContent.trim())
               .join(' ').replace(',','');
+            var lineup_players = lineups[LineupIndex].querySelector(".styles__players__UkT6g").textContent.trim();
+            var lineup_players = lineup_players.replace(/,/g, ' / ');
+            console.log(lineup_players)
             var lineup_index = LineupIndex + 1;
 
             var lineup_temp = [];
-            lineup_temp.push(lineup_index, winnings, finish_pos);
+            lineup_temp.push(lineup_index, lineup_players, winnings, finish_pos);
             var lineup_temp = lineup_temp.concat(tourney_info)
             tournament_info.push(lineup_temp);
           };

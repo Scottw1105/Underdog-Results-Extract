@@ -62,7 +62,7 @@ async function findDivs(startMarker, stopMarker) {
 
       // Optionally, you can add a delay using the sleep function
       // to give time for any events triggered by the click to settle
-      await sleep(1000); // Adjust the delay time as needed
+      await sleep(1500); // Adjust the delay time as needed
 
       // Gather all tournament divs after the click
       var tourneys = findTournaments();
@@ -74,16 +74,16 @@ async function findDivs(startMarker, stopMarker) {
         const tourney = tourneys[innerIndex];
         const tourneyText = tourney.textContent.trim();
         console.log(tourneyText);
-        await sleep(1000);
+        await sleep(1500);
 
         // Try to click the tournament
         tourney.click();
         console.log(`Clicked tournament ${innerIndex}`);
-        await sleep(1000);
+        await sleep(1500);
 
         // Gather tournament information
-        document.querySelector(".styles__infoIcon__i2XtS").click();
-        await sleep(1000);
+        document.querySelector(".styles__infoIcon__Ac3ZD").click();
+        await sleep(1500);
         var tourney_info = [];
 
         var tourney_name = document.querySelector(".styles__title__ZrO6C").textContent.trim();
@@ -116,7 +116,7 @@ async function findDivs(startMarker, stopMarker) {
         tourney_info.push(games);
 
         document.querySelector(".styles__closeButton__ZYuEF").click();
-        await sleep(1000);
+        await sleep(1500);
 
         // Gather individual lineup information
         var lineups = Array.from(document.querySelectorAll(".styles__draftPoolTeamCell__Qapze"));
@@ -145,7 +145,7 @@ async function findDivs(startMarker, stopMarker) {
         clickBack().click();
         console.log(`Clicked back after tournament ${innerIndex}`);
 
-        await sleep(1000); // Add an extra sleep after clicking back
+        await sleep(1500); // Add an extra sleep after clicking back
       }
       console.log(tournament_info);
       // Check if the text contains the stop marker
